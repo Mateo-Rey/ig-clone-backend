@@ -1,5 +1,14 @@
 import express from 'express'
 import cors from 'cors'
+import {MongoClient} from 'mongodb'
+import {uri} from './dbsecrets'
+
+
+const client = new MongoClient(uri)
+
+const db = client.db("DamianCluster")
+
+
 
 const app = express()
 app.use(cors())
