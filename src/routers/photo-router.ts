@@ -5,7 +5,6 @@ export const photoRouter = Router();
 
 photoRouter.get('/', async (req: Request, res: Response) => {
     const result = await photoServices.getAllPhotos()
-console.log("get")
     res.status(200).send(result)
 })
 
